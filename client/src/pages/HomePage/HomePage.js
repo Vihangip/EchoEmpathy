@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuth0 } from "@auth0/auth0-react";
 import './HomePageStyling.css';
-import loginLogo from '../pics/logo.jpeg';
+import loginLogo from '../../pics/logo.jpeg';
 import {Typography} from "@mui/material";
 
 function HomePage() {
