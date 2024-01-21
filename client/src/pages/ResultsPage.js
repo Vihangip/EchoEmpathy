@@ -5,6 +5,8 @@ import "./ResultsPageStyling.css"
 import RedditFeed from '../components/Results/RedditFeed';
 import {useLocation} from "react-router-dom";
 import SimilarProfileFeed from "../components/SimilarProfile/SimilarProfileFeed";
+import {Button} from "@mui/material"
+import {Link} from 'react-router-dom';
 
 function ResultsPage() {
     const location = useLocation();
@@ -21,6 +23,11 @@ function ResultsPage() {
             <Box className = "results-page-box3">
                 <SimilarProfileFeed data={data.posts}></SimilarProfileFeed>
             </Box>
+            <Link to = "/answer-question" >
+            <Button clasName="search-another-question-button">
+                Share Another Thought
+            </Button>
+            </Link>
         </div>
     );
 }
