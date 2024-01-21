@@ -7,6 +7,7 @@ import {useLocation} from "react-router-dom";
 import SimilarProfileFeed from "../components/SimilarProfile/SimilarProfileFeed";
 import {Button} from "@mui/material"
 import {Link} from 'react-router-dom';
+import {AnotherThoughtButton} from "./ResultsPageStyling";
 
 function ResultsPage() {
     const location = useLocation();
@@ -15,7 +16,7 @@ function ResultsPage() {
     return (
         <div style={{width: '100%'}}>
             <Box className = "results-page-box1">
-            <Typography sx={{fontFamily:"Kreon", fontSize:"5rem"}}>These people feel the same way as you...</Typography>
+            <Typography sx={{fontFamily:"Kreon", fontSize:"4rem"}}>These people feel the same way as you...</Typography>
             </Box>
             <Box className = "results-page-box2">
                 <RedditFeed data={data.posts}></RedditFeed>
@@ -24,9 +25,9 @@ function ResultsPage() {
                 <SimilarProfileFeed data={data.posts}></SimilarProfileFeed>
             </Box>
             <Link to = "/answer-question" >
-            <Button clasName="search-another-question-button">
+            <AnotherThoughtButton className="search-another-question-button">
                 Share Another Thought
-            </Button>
+            </AnotherThoughtButton>
             </Link>
         </div>
     );
