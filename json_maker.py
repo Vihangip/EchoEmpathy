@@ -41,3 +41,6 @@ def search_reddit_posts(keywords):
     print(post_data)
 
 search_reddit_posts(keywords);
+
+#search_reddit_posts("The main emotional elements of this situation include grief, loss, feeling purposeless and alone, and struggling with suicidal thoughts, while the situational element involves having to comfort siblings while dealing with personal weakness and a sense of being lost.");
+
