@@ -2,6 +2,7 @@ import React from 'react';
 import './RedditCard.css';
 
 const RedditCard = (props) => {
+    //TODO - more fields to be added
   return (
     <div className="reddit-card">
       <div className="user-info">
