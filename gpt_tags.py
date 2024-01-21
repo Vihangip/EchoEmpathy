@@ -13,7 +13,7 @@ userInput = sys.argv[1]
 
 def extract_keywords(userInput):
     response = client.chat.completions.create(model = "gpt-3.5-turbo",
-    messages = [{"role": "user", "content": f"Please provide a short concise summary of this situation, focusing on the main emotional and situational elements in one sentence.:\n\n{userInput}"}])
+    messages = [{"role": "user", "content": f"Focusing on the main emotional and situational elements of the situation, rephrase everything in one line.:\n\n{userInput}"}])
     print(response.choices[0].message.content)
 
 extract_keywords(userInput);
