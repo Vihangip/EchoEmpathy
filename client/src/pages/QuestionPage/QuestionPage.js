@@ -67,7 +67,7 @@ function QuestionPage() {
                         <TextInputField label="Let your thoughts echo...." onChange={handleUserInput} multiline/>
                     </div>
                     <div className="question-field1">
-                        <SubmitAnswerButton onClick={submitAnswer}>Submit now!</SubmitAnswerButton>
+                        <SubmitAnswerButton onClick={submitAnswer}>Submit</SubmitAnswerButton>
                     </div>
                 </>
             }

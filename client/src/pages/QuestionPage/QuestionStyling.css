@@ -7,11 +7,31 @@
     height: 100vh;
 }
 
+.question-field {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    height: auto; /* change this to auto */
+    min-height: 100vh; /* add a minimum height */
+    overflow: auto; /* add this line */
+    resize: vertical; /* add this line */
+}
+
 .question-field1 {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
     border-radius: 1rem;
+    height: auto; /* change this to auto */
+    min-height: 100vh; /* add a minimum height */
+    overflow: auto; /* add this line */
+    resize: vertical; /* add this line */
+    padding-bottom: 2rem;
 }
+
 
 .loading-container {
     display: flex;
