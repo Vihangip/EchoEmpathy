@@ -1,11 +1,11 @@
 import React from 'react';
-import "./SimilarProfile.css"
 import red1 from '../../pics/red1.png';
 import red2 from '../../pics/red2.png';
 import red3 from '../../pics/red3.png';
 import red4 from '../../pics/red4.png';
 import red5 from '../../pics/red5.png';
 import red6 from '../../pics/red6.png';
+import './SimilarProfileStyling.css'
 
 
 const SimilarProfile = (props) => {
@@ -31,7 +31,7 @@ const SimilarProfile = (props) => {
             <button className = "profile-button">
 
                 <a href={props.post.profileUrl} target="_blank" rel="noopener noreferrer">
-                    <img
+                    <img className = "img-sizing"
                     src={props.image}
                     alt="friend-profile"
                     onClick={() => {window.location.href=props.post.profileUrl}}
