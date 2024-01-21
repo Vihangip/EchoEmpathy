@@ -1,6 +1,6 @@
 # Echo Empathy
 
-![Echo Empathy Logo](/public/client/faviconlogo.jpg)
+![Echo Empathy Logo](/client/public/faviconlogo.jpg)
 
 ## Table of Contents
 - [Introduction](#introduction)
