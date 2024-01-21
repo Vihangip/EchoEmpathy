@@ -14,10 +14,10 @@ export const SubmitAnswerButton = styled(Button) ({
 });
 
 export const TextInputField = styled(TextField)({
-    width: '60%',
+    width: '80%',
     // Adjust the height by increasing padding and possibly the line-height
     '& .MuiInputBase-root': {
-        height: '80%',
+        height: '120%',
         padding: '20px', // Adjust this value as needed
         lineHeight: '1.5', // For multiline text fields, adjust line height if needed
     },
