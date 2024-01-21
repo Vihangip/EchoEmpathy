@@ -17,3 +17,4 @@ def extract_keywords(userInput):
     print(response.choices[0].message.content)
 
 extract_keywords(userInput);
+#extract_keywords("My dad passed away recently, and I am feeling like shit right now. I have lost all purpose in life. I don’t see a future for myself. It is very tiring because I have to comfort my siblings while pretending to be strong, but I am at the weakest point in my life right now. I have suicidal thoughts everyday, but I choose to keep going because my dad would want me too. He was the light of my life, and I miss him everyday. I feel so lost and alone. ")
