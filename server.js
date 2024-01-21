@@ -20,10 +20,12 @@ app.post("/api/submitAnswer", (req, res) => {
   extractProcess.stdout.on("data", (data) => {
     // Now, pass the output to json_maker.py
     const keywords = data.toString();
+    console.log(`Keywords - ${keywords}`);
     const jsonMakerProcess = spawn("python", ["json_maker.py", keywords]);
 
     jsonMakerProcess.stdout.on("data", (jsonData) => {
       // Send the final JSON output back to frontend
+      console.log(jsonData.toString());
       res.status(200).send(jsonData.toString());
     });
 
