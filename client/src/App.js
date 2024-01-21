@@ -1,12 +1,15 @@
-import logo from './logo.svg';
+
 import './App.css';
-import HomePage from './pages/HomePage.js';
+// import HomePage from './pages/HomePage.js';
+import UserPanelHome from './pages/UserPanelHome.js';
 
 function App() {
   return (
     <div className="App">
 
-        <HomePage></HomePage>
+
+        <UserPanelHome></UserPanelHome>
+
 
     </div>
   );
