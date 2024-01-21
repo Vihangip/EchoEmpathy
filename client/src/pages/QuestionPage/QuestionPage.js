@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react"
 import {SubmitAnswerButton, QuestionTypography, TextInputField} from "./QuestionStyling";
 import {useNavigate} from "react-router-dom";
+import {CircularProgress} from "@mui/material";
 
 function QuestionPage() {
     const [userInput, setUserInput] = useState("");
@@ -8,6 +9,8 @@ function QuestionPage() {
     const delay = 50;
     const [questionPrompt, setQuestionPrompt] = useState("");
     const [questionIndex, setQuestionIndex] = useState(0);
+
+    const [isLoading, setIsLoading] = useState(false);
 
     const navigate = useNavigate();
 
@@ -29,8 +32,9 @@ function QuestionPage() {
     }
 
     async function submitAnswer() {
-        console.log(`Submitting response as - ${JSON.stringify({userInput: userInput})}`)
+        console.log(`Submitting response as - ${JSON.stringify({userInput: userInput})}`);
         try {
+            setIsLoading(true);
             const response = await fetch("http://localhost:3001/api/submitAnswer", {
                 method: 'POST',
                 headers: {
@@ -42,6 +46,7 @@ function QuestionPage() {
                 throw new Error("Failed to submit error");
             }
             const data = await response.json();
+            setIsLoading(false);
             navigate("/reddit-results", {state: {data}});
         } catch (e) {
             console.log(e.message);
@@ -49,16 +54,24 @@ function QuestionPage() {
     }
 
     return (
-<div>
-        <div className="question-field">
-            <QuestionTypography>{questionPrompt}</QuestionTypography>
-            <TextInputField label="Let your thoughts echo...." onChange={handleUserInput} multiline />
-        </div>
-            <div className="question-field1">
-            <SubmitAnswerButton onClick={submitAnswer}>Submit now!</SubmitAnswerButton>
-            </div>
-
-        </div>
+        <>
+            {isLoading ?
+                <div className="loading-container">
+                    <h3 className="loading-text">Loading</h3>
+                    <CircularProgress size={100} />
+                </div>
+                :
+                <>
+                    <div className="question-field">
+                        <QuestionTypography>{questionPrompt}</QuestionTypography>
+                        <TextInputField label="Let your thoughts echo...." onChange={handleUserInput} multiline/>
+                    </div>
+                    <div className="question-field1">
+                        <SubmitAnswerButton onClick={submitAnswer}>Submit now!</SubmitAnswerButton>
+                    </div>
+                </>
+            }
+        </>
     );
 
 }

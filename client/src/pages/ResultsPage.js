@@ -12,7 +12,7 @@ function ResultsPage() {
     return (
         <div style={{width: '100%'}}>
             <Box className = "results-page-box1">
-            <Typography sx={{fontFamily:"Kreon", fontSize:"5rem"}}>These people are feeling the same way...</Typography>
+            <Typography sx={{fontFamily:"Kreon", fontSize:"5rem"}}>These people feel the same way as you...</Typography>
             </Box>
             <Box className = "results-page-box2">
                 <RedditFeed data={data.posts}></RedditFeed>

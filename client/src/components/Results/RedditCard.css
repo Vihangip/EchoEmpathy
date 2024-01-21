@@ -6,7 +6,8 @@
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Ensure the card itself does not scroll */
+  overflow: hidden;
+  border: 2px solid black;
 }
 
 .reddit-card .user-info {
@@ -33,10 +34,17 @@
   flex-shrink: 0;
 }
 
+/*.reddit-card .post-body {*/
+/*  max-width: 30vw;*/
+/*  max-height: 30vh;*/
+/*  overflow-y: auto;*/
+/*  flex-grow: 1;*/
+/*  word-wrap: break-word;*/
+/*}*/
+
 .reddit-card .post-body {
-  max-width: 30vw;
-  max-height: 25vh;
   overflow-y: auto;
   flex-grow: 1;
   word-wrap: break-word;
+  margin-bottom: 10px;
 }
