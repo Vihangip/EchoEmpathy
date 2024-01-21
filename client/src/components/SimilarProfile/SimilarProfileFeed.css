@@ -1,0 +1,4 @@
+.similarProfileFeed {
+    display: flex;
+    flex-direction: row;
+}
