@@ -1,6 +1,6 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const { spawn } = require("child_process");
+import express from 'express';
+import bodyParser from 'body-parser';
+import { spawn } from "child_process";
 
 const app = express();
 const port = 3001;
