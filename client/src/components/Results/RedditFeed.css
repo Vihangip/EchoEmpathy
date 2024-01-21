@@ -1,0 +1,4 @@
+.redditCardFlex {
+  display: flex;
+  flex-direction: row;
+}
