@@ -26,13 +26,14 @@ function QuestionPage() {
     }
 
     async function submitAnswer() {
+        console.log(`Submitting response as - ${JSON.stringify({userInput: userInput})}`)
         try {
-            const response = await fetch("/api/submitAnswer", {
+            const response = await fetch("http://localhost:3001/api/submitAnswer", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: userInput
+                body: JSON.stringify({userInput: userInput})
             })
             if (!response.ok) {
                 throw new Error("Failed to submit error");
