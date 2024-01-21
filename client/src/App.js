@@ -5,8 +5,8 @@ import ResultsPage from './pages/ResultsPage.js';
 function App() {
   return (
     <div className="App">
-        <HomePage></HomePage>
-        {/* <ResultsPage></ResultsPage> */}
+        {/*<HomePage></HomePage>*/}
+         <ResultsPage></ResultsPage>
     </div>
   );
 }
