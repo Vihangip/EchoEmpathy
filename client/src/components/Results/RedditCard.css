@@ -1,13 +1,15 @@
 .reddit-card {
   border: 1px solid #ccc;
-  width: 30vw;
-  height: 52vh;
+  width: 27vw;
+  height: 40vh;
   padding: 10px;
-  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   border: 2px solid black;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 .reddit-card .user-info {
@@ -18,8 +20,9 @@
 
 .reddit-card .user-info img {
   height: 50px;
-  width: 50px;
+  width: 120px;
   border-radius: 50%;
+  object-fit: cover;
   flex-shrink: 0;
 }
 

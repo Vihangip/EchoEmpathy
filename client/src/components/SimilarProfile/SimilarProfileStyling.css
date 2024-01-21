@@ -18,12 +18,44 @@
 }
 
 .img-sizing {
-    max-height: 22vh;
-    width: 10vw;
+    max-height: 18vh;
+    width: auto;
     margin-top: 2rem;
 }
 
 .img-sizing:hover {
     transition: transform 0.6s ease;
     transform: scale(1.2);
+}
+
+.similar-profile-styling {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-button {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    max-height: 30vh;
+    width: 30vw;
+}
+
+.img-sizing {
+    max-height: 18vh;
+    width: auto;
+    margin-top: 2rem;
+}
+
+.img-sizing:hover {
+    transition: transform 0.6s ease;
+    transform: scale(1.2);
+}
+
+.chat-text {
+    margin-top: 0.5rem;
+    font-size: 1rem; /* Adjust the font size as needed */
+    font-family: "Kreon";
 }
