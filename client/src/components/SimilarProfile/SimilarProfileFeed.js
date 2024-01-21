@@ -17,7 +17,7 @@ const SimilarProfileFeed = (props) => {
     function pickAnImage() {
         const index = Math.floor(Math.random() * images.length);
         if (currentIndex[index] !== 0) {
-            pickAnImage();
+            return pickAnImage();
         }
 
         setCurrentIndex( currentIndex[index] = 1)   // not available anymore
