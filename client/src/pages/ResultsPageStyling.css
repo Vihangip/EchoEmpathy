@@ -1,6 +1,6 @@
 .results-page-box1 {
     display: flex;
-    flexDirection: row;
+    flex-direction: row;
     height: 15vh;
     padding: 1rem;
     margin: 1rem;
@@ -10,17 +10,19 @@
 
 .results-page-box2 {
     display: flex;
-    flexDirection: row;
+    flex-direction: row;
+    justify-content:space-around;
     padding: 1rem;
     height: 55vh;
     margin: 1rem;
     background-color: pink;
     border-radius: 1rem;
+    flex-wrap: wrap;
 }
 
 .results-page-box3 {
     display: flex;
-    flexDirection: row;
+    flex-direction: row;
     height: 30vh;
     padding: 1rem;
     margin: 1rem;

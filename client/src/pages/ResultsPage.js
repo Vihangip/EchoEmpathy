@@ -2,7 +2,7 @@ import React from 'react';
 import {Typography} from "@mui/material";
 import Box from '@mui/material/Box';
 import "./ResultsPageStyling.css"
-// add reddit feed import
+import RedditFeed from '../components/Results/RedditFeed';
 
 function ResultsPage() {
     return (
@@ -11,7 +11,7 @@ function ResultsPage() {
             <Typography sx={{fontFamily:"Kreon", fontSize:"5rem"}}>These people are feeling the same way...</Typography>
             </Box>
             <Box className = "results-page-box2">
-                <Typography sx={{fontFamily:"Kreon", fontSize:"1rem"}}>SIMILAR POSTS BOX</Typography>
+                <RedditFeed></RedditFeed>
             </Box>
             <Box className = "results-page-box3">
                 <Typography sx={{fontFamily:"Kreon", fontSize:"5rem"}}>These people are feeling the same way...</Typography>
