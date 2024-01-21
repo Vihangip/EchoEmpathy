@@ -4,7 +4,7 @@ import {CustomFooter} from "./FooterStyling";
 function Footer() {
     return (
         <CustomFooter>
-            © 2024 MyThoughtsMyWords. All Rights Reserved.
+            © 2024 Echo Empathy. All Rights Reserved.
         </CustomFooter>
     )
 }

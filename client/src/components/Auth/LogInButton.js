@@ -8,7 +8,7 @@ export const LogInButton = styled(Button) ({
     background: 'black',
     width: '8rem',
     '&:hover': {
-        background: '#00468C' // 'rgba(255, 105, 180, 0.80)'
+        background: '#6AB181' // 'rgba(255, 105, 180, 0.80)'
     },
     alignSelf: 'center',
     justifyContent: 'center',

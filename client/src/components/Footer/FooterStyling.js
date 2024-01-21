@@ -7,4 +7,6 @@ export const CustomFooter = styled(Typography)({
     backgroundColor: 'black',
     height: '3rem',
     justifyItems: 'center',
+    paddingTop: '1rem',
+    textJustify: 'center'
 });

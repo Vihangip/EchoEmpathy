@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import {CustomNavBar, CustomNavButton, CustomToolBar, NavBarTypography} from "./NavBarStyling"
+import {CustomNavBar, CustomToolBar, NavBarTypography} from "./NavBarStyling"
+import {Container} from "@mui/system";
 
 function NavBar() {
     return (
         <CustomNavBar position="static">
             <CustomToolBar>
                 <NavBarTypography variant="h5">
-                    MyThoughtsMyWords
+                    Echo Empathy
                 </NavBarTypography>
             </CustomToolBar>
         </CustomNavBar>
