@@ -9,9 +9,11 @@ const RedditCard = (props) => {
         <img src={props.post.profilePic} alt={props.post.userName} />
         <span>{props.post.userName}</span>
       </div>
+        <a href={props.post.url} className="link-color">
       <div className="post-title">
         {props.post.title}
       </div>
+        </a>
       <div className="post-body">
         {props.post.body}
       </div>
