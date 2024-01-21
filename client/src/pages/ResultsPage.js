@@ -1,5 +1,8 @@
 import React from 'react';
 import {Typography} from "@mui/material";
+import Box from '@mui/material/Box';
+import "./ResultsPageStyling.css"
+// add reddit feed import
 
 function ResultsPage() {
     return (
