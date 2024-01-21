@@ -81,3 +81,11 @@ search-another-question-button:disabled {
     background: rgba(0, 0, 0, .08);
     color: rgba(0, 0, 0, .3);
 }
+
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}

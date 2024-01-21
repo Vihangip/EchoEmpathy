@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react"
 import {SubmitAnswerButton, QuestionTypography, TextInputField} from "./QuestionStyling";
 import {useNavigate} from "react-router-dom";
 import {CircularProgress} from "@mui/material";
+import {LogOutButton} from "../../components/NavBar/LogOutButton";
+import {useAuth0} from "@auth0/auth0-react";
 
 function QuestionPage() {
     const [userInput, setUserInput] = useState("");
@@ -13,6 +15,7 @@ function QuestionPage() {
     const [isLoading, setIsLoading] = useState(false);
 
     const navigate = useNavigate();
+    const {logout} = useAuth0();
 
     useEffect(() => {
         if (questionIndex < questionText.length) {
@@ -61,7 +64,10 @@ function QuestionPage() {
                     <CircularProgress size={100} />
                 </div>
                 :
-                <>
+                <div className="question-container">
+                    <LogOutButton onClick={() => logout({ logoutParams: { returnTo: window.location.origin }})}>
+                        Log out
+                    </LogOutButton>
                     <div className="question-field">
                         <QuestionTypography>{questionPrompt}</QuestionTypography>
                         <TextInputField label="Let your thoughts echo...." onChange={handleUserInput} multiline/>
@@ -69,7 +75,7 @@ function QuestionPage() {
                     <div className="question-field1">
                         <SubmitAnswerButton onClick={submitAnswer}>Submit</SubmitAnswerButton>
                     </div>
-                </>
+                </div>
             }
         </>
     );
