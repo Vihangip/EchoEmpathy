@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react"
 import {SubmitAnswerButton, QuestionTypography, TextInputField} from "./QuestionStyling";
 
 function QuestionPage() {
-    //
     const [userInput, setUserInput] = useState("");
     const questionText = "How are you feeling?";
     const delay = 50;
