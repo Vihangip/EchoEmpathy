@@ -1,7 +1,7 @@
 .question-field {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     min-height: 70vh;
     max-height: 100vh;
