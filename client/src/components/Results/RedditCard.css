@@ -48,3 +48,7 @@
   word-wrap: break-word;
   margin-bottom: 10px;
 }
+
+.link-color {
+  color: black;
+}
