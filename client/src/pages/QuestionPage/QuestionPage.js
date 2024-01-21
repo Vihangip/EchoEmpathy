@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom";
 import {CircularProgress} from "@mui/material";
 import {LogOutButton} from "../../components/NavBar/LogOutButton";
 import {useAuth0} from "@auth0/auth0-react";
+import SlimLoader from './SlimLoader';
 
 function QuestionPage() {
     const [userInput, setUserInput] = useState("");
@@ -64,8 +65,9 @@ function QuestionPage() {
         <>
             {isLoading ?
                 <div className="loading-container">
-                    <h3 className="loading-text">Loading</h3>
-                    <CircularProgress size={100} />
+                    {/* <h3 className="loading-text">Loading</h3> */}
+                    {/* <CircularProgress size={100} /> */}
+                    <SlimLoader />
                 </div>
                 :
                 <div className="question-container">
