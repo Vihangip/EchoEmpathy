@@ -1,8 +1,13 @@
 from openai import OpenAI
+from dotenv import load_dotenv
 
-client = OpenAI(api_key="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")
-import json
 import os
+
+load_dotenv()  # Load environment variables from .env file
+
+gpt_key = os.getenv('GPT_API_KEY')
+
+client = OpenAI(api_key = gpt_key)
 
 def extract_keywords(paragraph):
     response = client.chat.completions.create(model = "gpt-3.5-turbo",
