@@ -1,6 +1,8 @@
 import praw
 import json
 import os
+import sys
+
 
 from dotenv import load_dotenv
 
@@ -9,6 +11,8 @@ load_dotenv()  # Load environment variables from .env file
 client_id = os.getenv('REDDIT_ID')
 client_secret = os.getenv('REDDIT_SECRET')
 user_agent = os.getenv('REDDIT_USER_AGENT')
+
+keywords = sys.argv[1]
 
 def search_reddit_posts(keywords):
     
@@ -34,9 +38,6 @@ def search_reddit_posts(keywords):
 
     # Creating JSON object
     post_data = json.dumps({"posts": posts_data}, indent=2)
+    print(post_data)
 
-    return post_data
-
-# Example usage
-keywords = 'tired, sleepy, sad, lack of motivation, suicide'
-print(search_reddit_posts(keywords))
+search_reddit_posts(keywords);
