@@ -50,7 +50,11 @@ function QuestionPage() {
             }
             const data = await response.json();
             setIsLoading(false);
-            navigate("/reddit-results", {state: {data}});
+            const overall = {
+                data: data,
+                prompt: userInput
+            }
+            navigate("/reddit-results", {state: {overall}});
         } catch (e) {
             console.log(e.message);
         }
