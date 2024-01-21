@@ -6,7 +6,8 @@
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Ensure the card itself does not scroll */
+  overflow: hidden;
+  border: 2px solid black;
 }
 
 .reddit-card .user-info {
