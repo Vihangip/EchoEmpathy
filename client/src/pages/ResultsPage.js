@@ -8,6 +8,7 @@ import SimilarProfileFeed from "../components/SimilarProfile/SimilarProfileFeed"
 import {useNavigate} from "react-router-dom";
 import {Link} from 'react-router-dom';
 import {AnotherThoughtButton} from "./ResultsPageStyling";
+import SlimLoader from "./QuestionPage/SlimLoader";
 
 function ResultsPage() {
     const location = useLocation();
@@ -43,10 +44,7 @@ function ResultsPage() {
     return (
         <>
             {isLoading ?
-                <div className="loading-container">
-                    <h3 className="loading-text">Loading</h3>
-                    <CircularProgress size={100} />
-                </div>
+                <SlimLoader />
             :
                 <div style={{width: '100%'}}>
                     <Box className = "results-page-box1">
