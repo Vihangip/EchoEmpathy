@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react"
 import {SubmitAnswerButton, QuestionTypography, TextInputField} from "./QuestionStyling";
 
+
 function QuestionPage() {
     const [userInput, setUserInput] = useState("");
     const questionText = "How are you feeling?";
@@ -43,10 +44,15 @@ function QuestionPage() {
     }
 
     return (
+<div>
         <div className="question-field">
             <QuestionTypography>{questionPrompt}</QuestionTypography>
             <TextInputField label="Let your thoughts echo...." onChange={handleUserInput} multiline />
+        </div>
+            <div className="question-field1">
             <SubmitAnswerButton onClick={submitAnswer}>Submit now!</SubmitAnswerButton>
+            </div>
+
         </div>
     );
 
