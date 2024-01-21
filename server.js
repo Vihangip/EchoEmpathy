@@ -1,15 +1,19 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import { spawn } from "child_process";
+import cors from "cors";
 
 const app = express();
 const port = 3001;
 
 app.use(bodyParser.json());
+app.use(cors({
+  origin: "http://localhost:3000" //frontend uri
+}));
 
 app.post("/api/submitAnswer", (req, res) => {
-  const userInput = req.body;
-
+  const userInput = req.body.userInput;
+  console.log(`Received ${userInput} on the backend.`)
   // First, run extract_keywords.py
   const extractProcess = spawn("python", ["gpt_tags.py", userInput]);
 
