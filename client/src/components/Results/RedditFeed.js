@@ -3,11 +3,11 @@ import RedditCard from './RedditCard';
 import postData from './postData.json'; 
 import "./RedditFeed.css"
 
-const RedditFeed = () => {
+const RedditFeed = (props) => {
   return (
     <div className = "redditCardFlex">
-       {postData.posts.map((post, index) => (
-        <RedditCard key={index} post={post} />
+       {props.data.map((post, index) => (
+        <RedditCard key={index} post={post}/>
       ))}
     </div>
   )

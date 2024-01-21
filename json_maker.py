@@ -30,9 +30,9 @@ def search_reddit_posts(keywords):
             "title": submission.title,
             "body": submission.selftext,
             "url": submission.url,
-            "user-name": str(submission.author),
-            "profile-pic": "https://www.redditinc.com/assets/images/galleries/snoo-small.png",  # Placeholder for profile picture
-            "profile-url": "https://www.reddit.com/user/" + str(submission.author)
+            "userName": str(submission.author),
+            "profilePic": "https://www.redditinc.com/assets/images/galleries/snoo-small.png",  # Placeholder for profile picture
+            "profileUrl": "https://www.reddit.com/user/" + str(submission.author)
         }
         posts_data.append(post_info)
 
