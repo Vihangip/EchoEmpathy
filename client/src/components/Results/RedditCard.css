@@ -1,0 +1,25 @@
+.reddit-card {
+  border: 1px solid #ccc;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.reddit-card .user-info {
+  margin-bottom: 10px;
+}
+
+.reddit-card .user-info img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.reddit-card .user-info span {
+  margin-left: 10px;
+}
+
+.reddit-card .post-title {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
