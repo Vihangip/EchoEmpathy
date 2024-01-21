@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react"
 import {SubmitAnswerButton, QuestionTypography, TextInputField} from "./QuestionStyling";
-
+import {useNavigate} from "react-router-dom";
 
 function QuestionPage() {
     const [userInput, setUserInput] = useState("");
@@ -8,6 +8,8 @@ function QuestionPage() {
     const delay = 50;
     const [questionPrompt, setQuestionPrompt] = useState("");
     const [questionIndex, setQuestionIndex] = useState(0);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (questionIndex < questionText.length) {
@@ -39,6 +41,8 @@ function QuestionPage() {
             if (!response.ok) {
                 throw new Error("Failed to submit error");
             }
+            const data = await response.json();
+            navigate("/reddit-results", {state: {data}});
         } catch (e) {
             console.log(e.message);
         }
