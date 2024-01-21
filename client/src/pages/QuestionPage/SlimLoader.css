@@ -29,7 +29,7 @@ give {
     transform: rotate(0deg);
     border-right: 9px solid rgba(95, 177, 90,0.6);
   }
-  5% {border-right-color: rgba(95, 177, 900.4)}
+  5% {border-right-color: rgba(95, 177, 90.4)}
   10% {border-right-color: rgba(95, 177, 90,0.6)}
   15% {border-right-color: rgba(95, 177, 90,0.4)}
   20% {border-right-color: rgba(95, 177, 90,0.6)}
