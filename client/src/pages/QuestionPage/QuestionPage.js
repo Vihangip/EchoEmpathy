@@ -45,7 +45,7 @@ function QuestionPage() {
     return (
         <div className="question-field">
             <QuestionTypography>{questionPrompt}</QuestionTypography>
-            <TextInputField label="Your answer" onChange={handleUserInput} multiline />
+            <TextInputField label="Let your thoughts echo...." onChange={handleUserInput} multiline />
             <SubmitAnswerButton onClick={submitAnswer}>Submit now!</SubmitAnswerButton>
         </div>
     );
