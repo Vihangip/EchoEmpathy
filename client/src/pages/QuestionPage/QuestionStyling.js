@@ -7,6 +7,7 @@ export const SubmitAnswerButton = styled(Button) ({
     borderRadius: '1rem',
     background: 'black',
     height: '6rem',
+    width:'20rem',
     marginTop: '13rem',
     '&:hover': {
         background: '#6AB181'
